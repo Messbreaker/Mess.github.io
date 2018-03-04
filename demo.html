@@ -7,15 +7,15 @@
 	</title>
 	<style type="text/css">
 		body{
-			width: 96%;
+			width: 99%;
 			height: 100%;
 		}
 		*{
-			color: #eef;
+			color: #eeeeff;
 		}
 		#content{
 			top: 0px;
-			left: 0px;
+			left: 0;
 			position: absolute;
 			width: 100%;
 			height: 100%;
@@ -24,11 +24,12 @@
 		}
 		.time{
 			width: 78%;
-			height: 79%;
+			height: 82%;
 			position: relative;
-			left: 10%;
-			top: 10%;
-			font-size: 1.3rem;
+			left: 12%;
+			top: 4%;
+			padding-bottom: 12px;
+			/*font-size:35%;*/
 		}
 		.timer{
 			position: relative;
@@ -41,17 +42,20 @@
 			padding: 0;
 			margin: 0;
 			position: relative;
-			width: 96%;
+			width: 93%;
 			height: 15%;
-			left: 0;
+			/*left: 0;*/
+			left: 7%;
 			/*top: 20%;*/
 		}
 		ul li{
+			float: center;
 			text-align: center;
 			list-style: none;
 			display: inline-block;
-			font-size: 1.1em;
-			width: 13.5%;
+			font-size: 1.2rem;
+			width: 12.6%;
+			font: 18px/1.5 'Microsoft YaHei',arial,tahoma,\5b8b\4f53,sans-serif;
 			/*height: 35px;*/
 		}
 		li span{
@@ -59,24 +63,26 @@
 		}
 		.tip{
 			font-family:"Times New Roman",Georgia,Cursive  ;
-			font-size: 1.2em;
-			position: absolute;
-			width: 50%;
+			font-size: 135%;
+			position: relative;
+			width: 75%;
 			padding: 10px 0;
-			top: 36%;
+			top: 30%;
 		}
 		.clock{
-			position: absolute;
+			/*display: flex;*/
+			align-items: top;
+			position: relative;
 			width: 25%;
 			height: auto;
-			top: 12%;
+			bottom:5%;
 			display: inline-block;
-			left: 69%;
+			left: 72%;
 		}
 		#clock {                         
 		   stroke: black;                 
 		   stroke-linecap: round;         
-		   fill: #fff;                    
+		   fill:rgba(235,235,255,0.5);                    
 		}
 		#face { stroke-width: 2px;}       
 		#ticks { stroke-width: 2px; }       
@@ -94,10 +100,10 @@
 	<div class="bg-img"></div>
 	<div id="content">
 		<div class="time">
-			<div class="timer" ><span style="font-size: 2.9rem;">距离考研还有:</span><span id="timer" style="font-size: 1.6rem;position: relative;left: 20px;"></span></div>
+			<div class="timer" ><span style="font-size: 240%;padding: 25px 0;">距离考研还有:</span><span id="timer" style="font-size: 130%;position: relative;left: 10px;"></span></div>
 			<!-- <div class="tip">150413考研加油</div> -->
 			<div class="tip tc">I don't let myself down, because I have met you in my most gorgeous age. </div>
-			<div class="clock tc">
+			<div class="clock tc " onclick="alert('13班考研加油')">
 				  <svg id="clock" viewBox="0 0 100 100" width="95%" height="95%"> 
 				    <defs>   <!-- 定义下拉阴影的滤镜 -->
 				     <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
@@ -137,13 +143,13 @@
 			</div>
 		</div>
 		<ul id="cal">
-			<li><span>周四</span>01</li>
+			<!-- <li><span>周四</span>01</li>
 			<li><span>周五</span>02</li>
 			<li><span>周六</span>03</li>
 			<li><span>周日</span>03/04</li>
 			<li><span>周一</span>05</li>
 			<li><span>周二</span>06</li>
-			<li><span>周三</span>07</li>
+			<li><span>周三</span>07</li> -->
 		</ul>
 	</div>
 	<script type="text/javascript">
@@ -158,8 +164,30 @@
   			minutes = checkTime(minutes); 
 			seconds = checkTime(seconds); 
 			updateTime();
+			var cal=document.getElementById("cal");
 			setInterval("lefttimer(2018,12,23,8,30,0)",1000); 
-			document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒";
+			
+			document.getElementById("timer").innerHTML ="   "+ days+"天" + hours+"小时" + minutes+"分"+seconds+"秒";
+		}
+		function get_li(){
+			for(var i=1;i<8;i++){
+				var days=new Date().getDate();
+				var week=new Date().getDay()+i+3;
+				var str="周"+"日一二三四五六".charAt(week%7);
+				var li=document.createElement('li');
+				var span=document.createElement("span");
+				var p=document.createElement("p");
+				var date=days-4+i;
+				var date2=checkTime(date);
+				if(i==4)
+					span.innerHTML="今天"
+				else
+					span.innerHTML=str;
+				p.innerHTML=date2;
+				li.appendChild(span);
+				li.appendChild(p);
+				cal.appendChild(li);
+			}
 		}
 		function checkTime(i){ //将0-9的数字前面加上0，例1变为01 
 			  if(i<10) { 
@@ -187,6 +215,7 @@
 		    // 每秒钟更新下时钟显示时间
 		    setTimeout(updateTime, 1000);
 		}
+		get_li();
 		lefttimer();
 	</script>
 </body>
