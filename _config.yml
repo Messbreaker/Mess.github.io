@@ -55,7 +55,10 @@ comments :
     short_name :  # 填写你的 disqus id
   disqus :
       short_name :  # 填写你的 disqus id
-
+#gitment
+comment_gitment_repo: 'Messbreaker.github.io'
+comment_gitment_clientId:  'f503da97780e8e60c53f'
+comment_gitment_clientSecret: 'cb0df06c91cb26350a86b6f02727fe0c49c8f952'
 # Analytics and webmaster tools stuff goes here
 google_analytics:  # 填写你  google_analytics id
 google_verify:
