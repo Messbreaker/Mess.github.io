@@ -95,34 +95,35 @@ layout: default
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>
-                </div>
+                </div>  
                 <!-- 多说评论框 end -->
+                <div id="gitmentContainer" style="width: 760px;"></div>
+                <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+                <script src="https://billts.site/js/gitment.js"></script>
+                <script>
+                var gitment = new Gitment({
+                    owner: 'Messbreaker',
+                    repo: 'Messbreaker.github.io',
+                    oauth: {
+                        client_id: 'f503da97780e8e60c53f',
+                        client_secret: 'cb0df06c91cb26350a86b6f02727fe0c49c8f952',
+                    },
+                });
+                gitment.render('gitmentContainer');
+                </script>
             </div>
         </div>
     </div>
 </article>
 <!-- style="width: 55%;left: 22%;position: relative;" -->
-<div id="gitmentContainer" style="width: 760px;"></div>
-<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
-<script src="https://billts.site/js/gitment.js"></script>
-<script>
-var gitment = new Gitment({
-    owner: 'Messbreaker',
-    repo: 'Messbreaker.github.io',
-    oauth: {
-        client_id: 'f503da97780e8e60c53f',
-        client_secret: 'cb0df06c91cb26350a86b6f02727fe0c49c8f952',
-    },
-});
-gitment.render('gitmentContainer');
-</script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
          $('#gitmentContainer').css({
               'position' : 'relative',
               'left' : ($(window).width() - $('#gitmentContainer').outerWidth()) / 2 + 'px'
           })
-</script>
+</script> -->
 <!-- 重新设定尺寸 -->
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
