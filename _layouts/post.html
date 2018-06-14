@@ -116,11 +116,14 @@ var gitment = new Gitment({
 });
 gitment.render('gitmentContainer');
 </script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
-        var con = document.getElementById('gitmentContainer');
-        con.style.position = 'relative';
-        con.style.left = (document.body.offsetWidth - con.clientWidth) / 2 + 'px';
-</script>   <!-- 重新设定尺寸 -->
+         $('#gitmentContainer').css({
+              'position' : 'relative',
+              'left' : ($(window).width() - $('#gitmentContainer').outerWidth()) / 2 + 'px'
+          })
+</script>
+<!-- 重新设定尺寸 -->
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
