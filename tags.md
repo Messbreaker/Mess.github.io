@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Tags"
-description: "哈哈，你找到了我的文章分类库"  
 header-img: "img/semantic.jpg"  
 ---
 
