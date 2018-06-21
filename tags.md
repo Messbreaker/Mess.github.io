@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Tags"
-header-img: "img/semantic.jpg"  
+header-img: "img/bg6.jpg"  
 ---
 
 #本页使用方法
