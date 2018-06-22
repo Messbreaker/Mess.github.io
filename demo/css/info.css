@@ -1,0 +1,153 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: url(../images/banner2.jpg)no-repeat 0px 0px;
+    background-size: cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+h1,h2{
+	font-family: 'Montserrat', sans-serif;
+}
+/*--main-content--*/
+h1 {
+    color: #fff;
+    font-size: 40px;
+    margin: 110px 0px 70px;
+    letter-spacing: 4px;
+    word-spacing: 13px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.main-agileits {
+    background: rgba(12, 12, 12, 0.52);
+    width: 100%;
+    height: 100%;	;
+       padding: 50px 45px;
+    margin: 0 auto;
+}
+.right-wthree{
+	  float: left;
+    text-align: center;
+    width: 29%;
+}
+.right-wthree h2 {
+    color: #fbfcfd;
+    font-size: 25px;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+.right-wthree p {
+    color: #b7b6b6;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.left-w3ls {
+	    float: right;
+       margin-top: 28px;
+    width: 50%;
+}
+ul.address {
+    margin-bottom: 2em;
+}
+ul.address li {
+    display: block;
+}
+ul li b {
+    font-weight: bold;
+}
+ul.address li ul.address-text li:nth-child(1) {
+    width: 18%;
+}
+ul.address li ul.address-text li {
+    display: inline-block;
+    color: #fffdfd;
+    margin-top: 1em ;
+    font-weight:400;
+	font-size: 16px;
+	letter-spacing: 0.9px;
+}
+ul.address li ul.address-text li a {
+    color: #f9f3f3;
+    text-decoration: none;
+	transition:0.5s all;
+}
+ul.address li ul.address-text li a:hover{
+    color: #bb2849;
+	transition:0.5s all;
+}
+.left-w3ls p span{
+	font-weight:300;
+	color:#555;
+	font-size:17px;
+}
+.left-w3ls p a{
+	font-weight:300;
+	color:#555;
+	font-size:17px;
+}
+.button a {
+        font-size: 17px;
+    padding: 8px 32px;
+    display: inline-block;
+    background: #bb2849;
+    border: 2px solid #bb2849;
+    color: #fff;
+	outline: none;
+	-webkit-transition:0.5s all;
+	-o-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-ms-transition:0.5s all;
+	transition:0.5s all;
+}
+.button a:hover {
+	-webkit-transition:0.5s all;
+	-o-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-ms-transition:0.5s all;
+	transition:0.5s all;
+}
+.right-wthree img {
+    border: 2px solid #333;
+    padding: 6px;
+}
+/*--main-content--*/
+/*--footer--*/
+p.agileinfo {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #333;
+}
+footer p a{
+	color:#333;
+	-webkit-transition:0.5s all;
+	-o-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-ms-transition:0.5s all;
+	transition:0.5s all;
+}
+footer {
+    margin: 85px 0px;
+	text-align:center;
+}
